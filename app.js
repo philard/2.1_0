@@ -13,8 +13,8 @@ var extensionUrl = document.querySelector("#philsExtensionEntryPoint").getAttrib
 requirejs.config({
 	baseUrl: extensionUrl+'lib',
     paths: {
-        app: '../app',
-        query: './jquery'
+        app: '../app'
+//         , query: './jquery'
     },
     shim: {
         //"shim/jquery.alpha": ["jquery"],

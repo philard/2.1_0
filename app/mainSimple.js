@@ -1,11 +1,7 @@
 
-define([ "./messages", "object-browser"]//, "shim/jquery.alpha", "shim/jquery.beta" ]
-        , function(messages, objectBrowser) {
+define(["jquery", "./messages", "object-browser", 'backbone']//, "shim/jquery.alpha", "shim/jquery.beta" ]
+        , function($, messages, objectBrowser) {
 
-// 	$(function() {
-//         $('body').alpha().beta();
-//         $('body').append(messages.getHello());
-//     });
 	
 	
 	
@@ -17,7 +13,17 @@ define([ "./messages", "object-browser"]//, "shim/jquery.alpha", "shim/jquery.be
 	}
 
 
-// 	var backbone = require('backbone'),
-//         underscore = require('underscore');
-        
+	var backbone = require('backbone'),
+        underscore = require('underscore');
+
+	
+	$(function() {
+//         $('body').alpha().beta();
+//         $('body').append(messages.getHello());
+    
+		$('body')
+            .append('<div>backbone version: ' + backbone.VERSION + '</div>')
+            .append('<div>underscore version: ' + underscore.VERSION + '</div>');
+    });
+
 });
