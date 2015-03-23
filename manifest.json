@@ -1,0 +1,38 @@
+{
+   "background": {
+      "scripts": [ "init.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_title": "Click to see the javascript events attached on this page"
+   },
+   "commands": {
+      "start-visual-event": {
+         "description": "Start Visual Event",
+         "suggested_key": {
+            "default": "Alt+Shift+E"
+         }
+      }
+   },
+   "description": "Know what event is bound on each dom element",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3rU/04n2n9qW7WriajhkM2UJd/Zds7K5gBv4y53e6GnR4+TJeD+iLwGF04A0UCy+I1d/Bo9gmKFQn5oNtwaR1MOzAW8J6pHw3G2cAq9qpB5RgiWSP/Cs7lPfUMzR9Guv8y+l4m2Hsl3sUPFZ5Ban8JLfdFMI/h8jbQaNwh0O2iwIDAQAB",
+   "manifest_version": 2,
+   "name": "Visual Event",
+   "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
+   "web_accessible_resources": [
+    "css/*.css",
+    "scripts/*",
+    "scripts/object_node.js",
+    "icon48.png",
+    "common",
+	"*.*",
+	"jdls_files/*.js"
+  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1"
+}

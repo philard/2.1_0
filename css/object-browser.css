@@ -1,0 +1,21 @@
+        .OBPopup {
+            border:2px ridge;
+            background-color:#ffffcc;
+            padding:2px 4px;
+            cursor:default;
+        }
+        .OBType {
+            font-weight:bold;
+        }
+        .OBIndex, .OBNumber, .OBRegExp {
+            color:#0000ff;
+        }
+        .OBString {
+            color:#aa0000;
+        }
+        .OBError {
+            font-weight:bold;
+            color:#ff0000;
+        }
+		
+		p {  background-color: yellow;}
