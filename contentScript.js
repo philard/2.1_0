@@ -18,30 +18,6 @@
     (document.head||document.documentElement).appendChild(s);
 
 
-    var s = document.createElement('script');
-    s.src= chrome.extension.getURL('jdls_files/viz.js');
-    (document.head||document.documentElement).appendChild(s);
-
-    var s = document.createElement('script');
-    s.src = chrome.extension.getURL('jdls_files/object_node.js');
-    (document.head||document.documentElement).appendChild(s);
-
-    var s = document.createElement('script');
-    s.src = chrome.extension.getURL('jdls_files/object_graph.js');
-    (document.head||document.documentElement).appendChild(s);
-
-    var s = document.createElement('script');
-    s.src = chrome.extension.getURL('jdls_files/viz_visualizer.js');
-    (document.head||document.documentElement).appendChild(s);
-
-    var s = document.createElement('script');
-    s.src = chrome.extension.getURL('jdls_files/user_code.js');
-    (document.head||document.documentElement).appendChild(s);
-
-    var s = document.createElement('script');
-    s.src = chrome.extension.getURL('jdls_files/ui.js');
-    (document.head||document.documentElement).appendChild(s);
-
     window.onload = window.go= function() {
         debugger;
         jdls.ui.initialize({

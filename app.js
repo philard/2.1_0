@@ -13,7 +13,8 @@ var extensionUrl = document.querySelector("#philsExtensionEntryPoint").getAttrib
 requirejs.config({
 	baseUrl: extensionUrl+'lib',
     paths: {
-        app: '../app'
+        app: '../app',
+        jdls_files: '../jdls_files'
 //         , query: './jquery'
     },
     shim: {
@@ -28,6 +29,15 @@ requirejs.config({
         },
         underscore: {
             exports: '_'
+        }
+        , "jdls_files/viz": {
+        	exports: 'Viz'
+        }
+        , "jdls_files/object_node": {
+        	exports: 'jdls.ObjectNode'
+        }
+        , "object-browser": {
+        	exports: 'OBPopup'
         }
     }
 });
