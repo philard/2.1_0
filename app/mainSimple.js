@@ -1,9 +1,7 @@
 
-define(["jquery", "./messages", "object-browser", 'backbone']//, "shim/jquery.alpha", "shim/jquery.beta" ]
+define(["jquery", "./messages", "object-browser", 'backbone', "shim/jquery.alpha", "shim/jquery.beta" ]
         , function($, messages, objectBrowser) {
 
-	
-	
 	
 	require(['print'], onLoad, function (err) {
 			console.log("Can't require print. Trying a hacky path... Your baseURL is: "+requirejs.s.contexts._.config.baseUrl);		require(['../lib/print'], onLoad);
@@ -18,8 +16,8 @@ define(["jquery", "./messages", "object-browser", 'backbone']//, "shim/jquery.al
 
 	
 	$(function() {
-//         $('body').alpha().beta();
-//         $('body').append(messages.getHello());
+        $('body').alpha().beta();
+        $('body').append(messages.getHello());
     
 		$('body')
             .append('<div>backbone version: ' + backbone.VERSION + '</div>')

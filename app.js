@@ -17,8 +17,11 @@ requirejs.config({
 //         , query: './jquery'
     },
     shim: {
-        //"shim/jquery.alpha": ["jquery"],
-        //"shim/jquery.beta": ["jquery"],
+        "shim/jquery.alpha": ["jquery"],
+        "shim/jquery.beta": {
+			deps: ['jquery'],
+        	exports: 'jQuery.fn.beta'
+        },
         backbone: {
             deps: ['jquery', 'underscore'],
             exports: 'Backbone'
