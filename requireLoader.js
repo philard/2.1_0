@@ -21,28 +21,21 @@ requirejs.config({
 //         , query: './jquery'
     },
     shim: {
-        "shim/jquery.alpha": ["jquery"],
-        "shim/jquery.beta": {
-			deps: ['jquery'],
-        	exports: 'jQuery.fn.beta'
-        },
-        backbone: {
-            deps: ['jquery', 'underscore'],
-            exports: 'Backbone'
-        },
-        underscore: {
-            exports: '_'
-        }
-        , "jdls_files/viz": {
-        	exports: 'Viz'
-        }
-        , "jdls_files/object_node": {
-        	exports: 'jdls.ObjectNode'
-        }
-        , "object-browser": {
-        	exports: 'OBPopup'
-        }
+//         "shim/jquery.alpha": ["jquery"],
+//         "shim/jquery.beta": {
+// 			deps: ['jquery'],
+//         	exports: 'jQuery.fn.beta'
+//         },
+//         "jdls_files/viz": {
+//         	exports: 'Viz'
+//         },
+//         "jdls_files/object_node": {
+//         	exports: 'jdls.ObjectNode'
+//         }, 
+//         "object-browser": {
+//         	exports: 'OBPopup'
+//         }
     }
 });
-requirejs(['app/mainSimple']);
+// requirejs(['app/mainSimple']);
 requirejs([extensionUrl+'app/mainSimple.js']);

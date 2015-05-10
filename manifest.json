@@ -10,7 +10,7 @@
       "start-visual-event": {
          "description": "Start Visual Event",
          "suggested_key": {
-            "default": "Alt+Shift+E"
+            "default": "Alt+E"
          }
       }
    },
@@ -25,14 +25,15 @@
    "name": "Visual Event",
    "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
    "web_accessible_resources": [
-		"css/*.css",
-		"scripts/*",
-		"scripts/object_node.js",
-		"icon48.png",
-		"common",
-		"*.*",
-		"app/*",
-		"jdls_files/*.js"
+		//"css/*.css",
+		//"scripts/*",
+		//"scripts/object_node.js",
+		//"common",
+	//	"*.*",
+		//"app/*",
+		//"app/messages",
+		//"jdls_files/*.js",
+		//"icon48.png"
 	],
 	"update_url": "https://clients2.google.com/service/update2/crx",
 	"version": "2.1"
