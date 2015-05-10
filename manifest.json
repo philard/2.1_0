@@ -25,14 +25,15 @@
    "name": "Visual Event",
    "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
    "web_accessible_resources": [
-    "css/*.css",
-    "scripts/*",
-    "scripts/object_node.js",
-    "icon48.png",
-    "common",
-	"*.*",
-	"jdls_files/*.js"
-  ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1"
+		"css/*.css",
+		"scripts/*",
+		"scripts/object_node.js",
+		"icon48.png",
+		"common",
+		"*.*",
+		"app/*",
+		"jdls_files/*.js"
+	],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "2.1"
 }

@@ -63,6 +63,13 @@ window.jdls = window.jdls || {};
 		forEach(this._value, function(name, value, id) {
 			if (typeof value !== "function" && typeof value !== "object") return;
 			if (value === null) return;
+			if (name == "<prototype>"){
+				if(value.unwrap) {
+					var warningMsg = {error:"Jquery prototypes hidden."};
+					fn(new ObjectNode(self._name + "." + name, warningMsg), id, name);
+					return;
+				}
+			}
 			fn(new ObjectNode(self._name + "." + name, value), id, name);
 		});
 	};
@@ -114,7 +121,10 @@ window.jdls = window.jdls || {};
 
 	function forEach(object, fn) {
 		getProperties(object).forEach(function(name, index) {
-			fn(name, object[name], "f" + index);
+// 			try {
+				fn(name, object[name], "f" + index);
+// 			} catch(ex) {
+// 			}
 		});
 		fn("<prototype>", Object.getPrototypeOf(object), "proto");
 	}

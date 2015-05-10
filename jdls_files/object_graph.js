@@ -35,10 +35,15 @@ window.jdls = window.jdls || {};
 		addNode(self, node);
 		node.forEachSubNode(function(subnode, id, name) {
 			if (isBuiltin(subnode) && !self._showBuiltins) return;
-
+			
 			subnode = dedupe(self, subnode);
 			addEdge(self, node, subnode, id);
+			
 			if (isOrdinaryFunction(subnode, name) && !self._showAllFunctions) return;
+			if( isDomEl(subnode) ) {
+				return;
+			}
+
 			traverse(self, subnode);
 		});
 	}
@@ -105,6 +110,11 @@ window.jdls = window.jdls || {};
 			value === Date.prototype ||
 			value === RegExp.prototype ||
 			value === Error.prototype;
+	}
+
+	function isDomEl(node) {
+		var value = node.value();
+		return value && value.nodeType === 1;
 	}
 
 	function isOrdinaryFunction(node, propertyName) {
